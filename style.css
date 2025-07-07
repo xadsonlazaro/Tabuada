@@ -1,0 +1,90 @@
+
+* { 
+    text-align: center;  
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+     background-color: #000; 
+     color: #fff;
+}
+
+h1 { 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    font-weight: 200;
+} 
+
+.input {  
+    width: 250px;
+    padding: 10px; 
+    font-size: 15px;
+    border: 2px solid #00f2fe; 
+    border-radius: 12px;
+    text-align: center; 
+    outline: none; 
+    transition: all 0.3s ease; 
+    box-shadow: 0 0 10px #00f2fe50;
+    animation: neon-pulse 5s infinite;
+}
+
+.input-neon :focus  {  
+    background: linear-gradient(120deg
+    #00f2fe); 
+    color: #000; 
+    box-shadow: 0 0 20px #00f2fe, 0 0 40px #4facfe;
+    transition: scale(1.05);
+}
+ 
+@keyframes neon-pulse { 
+    0% {  
+        box-shadow: 0 0 10px #00f2fe, 0 0 40px #ef4ffe;
+    }
+    50% { 
+        box-shadow: 0 0 20px #00f2fe50;
+    }
+    100% {  
+        box-shadow: 0 0 10px #00f2fe50;
+    }
+}
+
+.button { 
+    position: relative; 
+    display: inline-block; 
+    padding: 12px 30px; 
+    background: transparent; 
+    color: #fff; 
+    border: 2px solid #00f2fe; 
+    font-weight: bold; 
+    text-align: center; 
+    text-transform: color 0.4s ease-in-out; 
+    border-radius: 18px; 
+}
+
+.button::before {  
+    content: ""; 
+    position: absolute; 
+    left: 0; 
+    top: 0; 
+    height: 100%; 
+    width: 0; 
+    background: linear-gradient(120deg, #00f2fe, #4facfe);
+    z-index: -1; 
+    transition: width 0.4s ease-in-out; 
+} 
+
+.button:hover::before { 
+    width: 100%; 
+}
+
+.button:hover {  
+    color: #000
+}
+
+.select {  
+    width: 250px;
+    padding: 12px 10px;
+    font-size: 20px; 
+    border-radius: 20px 10px; 
+    box-shadow: 0 0 10px #00f2fe;
+    border: 2px solid rgba(0, 128, 0, 0.795);
+    outline: none; 
+    animation: alternate;
+ }
